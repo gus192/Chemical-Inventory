@@ -1,0 +1,200 @@
+name,cas,carbons,distributor,container_size,state,location,bottles,storage_conditions,hazards,sds_link
+dl-lactic acid,50-21-5,3,Sigma-Aldrich,100g,<NA>,Colin Fumehood,1,rt,corrosive; causes serious eye damage; skin irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=A159500
+"1,2,4-Butanetriol",3068-00-6,4,Sigma-Aldrich,25 g,<NA>,Colin Fumehood,1,rt,skin irritant; eye irritant; STOT SE 3,https://www.sigmaaldrich.com/US/en/sds/aldrich/19040
+trans-4-Hydroxy-L-proline,51-35-4,5,Acros Organics,10 g,<NA>,Colin Fumehood,1,rt,not classified,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC121780250
+4-Dimethylaminopyridine ,1122-58-3,7,Thermo Scientific,25g,<NA>,Colin Fumehood,1,rt,harmful if swallowed; skin/eye irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC148271000
+2-Isocyanatoethyl methacrylate,30674-80-7,8,Sigma-Aldrich,5 mL,<NA>,Colin Fumehood,1,rt dry inert gas,fatal if inhaled; skin sensitizer; eye/skin irritant,https://www.tcichemicals.com/BE/en/sds/I1111_EU_6N.pdf
+"2,2'-(Ethylenedioxy)diethanethiol",14970-87-7,8,Sigma-Aldrich,100 mL,<NA>,Colin Fumehood,1,rt,skin/eye irritant; harmful if swallowed,https://www.sigmaaldrich.com/US/en/sds/Aldrich/465178
+Triethyl Phosphate,78-40-0,8,Acros Organics,1 kg,<NA>,Colin Fumehood,1,rt,harmful if swallowed; eye irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC139680010
+1-butyl-3-methylimidazolium chloride,79917-90-1,9,Acros Organics,25 g,<NA>,Colin Fumehood,1,rt dry,toxic if swallowed; skin/eye irritant; aquatic chronic,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC354091000
+"trans-3,6-Endomethylene-1,2,3,6-tetra-hydrophthaloyl chloride",4582-21-2,10,Sigma-Aldrich,25 g,<NA>,Colin Fumehood,1,rt dry,corrosive; causes severe skin burns and eye damage; lachrymator,https://www.sigmaaldrich.com/US/en/product/aldrich/114154
+"3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heptadecafluor-1-decanthiol",34143-74-3,10,Sigma-Aldrich,5 mL,<NA>,Colin Fumehood,1,rt,skin/eye irritant,https://nrf.aux.eng.ufl.edu/_files/msds/2/1H%2C1H%2C2H%2C2H-Perfluorodecanethiol.pdf
+tetrapropylammonium chloride,5810-42-4,12,Acros Organics,25 g,<NA>,Colin Fumehood,2,rt dry inert gas,skin/eye irritant; harmful if swallowed,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC420711000
+tert-Dodecylmercaptan,25103-58-6,12,Fluka,250ml,<NA>,Colin Fumehood,1,rt,eye irritant; STOT SE 2; aquatic chronic 1,https://www.tcichemicals.com/US/en/p/D0971
+Trimethylolpropane triacrylate,15625-89-5,15,Sigma-Aldrich,100 g,<NA>,Colin Fumehood,1,rt,skin/eye irritant; skin sensitizer; suspected carcinogen,https://www.chemicalbook.com/msds/trimethylolpropane-triacrylate.pdf
+"1-hexadecanethiol, tech., 92%",2917-26-2,16,Sigma-Aldrich,25 mL,<NA>,Colin Fumehood,1,rt,harmful if swallowed; skin/eye irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC120521000
+Methylene Blue,7220-79-3,16,Fisher Scientific,100 g,<NA>,Colin Fumehood,1,rt,harmful if swallowed; eye/skin irritant,https://www.chemscience.com/assets/uploads/safety_datasheet/GRM956-sds.pdf
+Calcium hydride,7789-78-8,,thermo,100g,<NA>,Pouriya's fumehood,2,rt dry inert gas,"water-reactive, releases flammable gas",https://www.sigmaaldrich.com/sds/sial/208027
+Di-n-butylmagnesium solution,1191-47-5,,Sigma-Aldrich,100ml,<NA>,Pouriya's fumehood,5,2–8 C dry inert gas,"pyrophoric, water-reactive, flammable",https://www.fishersci.com/store/msds?partNumber=AC377778000&productDescription=DI-N-BUTYLMAGNESIUM&vendorId=VN00032119&countryCode=US&language=en
+Magnesium,7439-95-4,,Sigma-Aldrich,100g,<NA>,Pouriya's fumehood,1,rt dry,flammable solid (powder/turnings); reacts with acids,https://www.fishersci.com/store/msds?partNumber=M7100&productDescription=MAGNESIUM+METAL+POWDER+100G&vendorId=VN00033897&countryCode=US&language=en
+Potassium,2023695,,thermo,25g,<NA>,Pouriya's fumehood,1,rt dry inert gas,"water-reactive, may ignite in air",https://assets.thermofisher.cn/directwebviewer/private/results.aspx?LANGUAGE=d__EN&PLANT=d__ALF&SKU=ALFAA10299&SUBFORMAT=d__CGV4&page=NewSearch
+Potassium tert-butoxide,865-47-4,,Sigma-Aldrich,50ml,<NA>,Pouriya's fumehood,1,rt dry inert gas,"corrosive, water-reactive",https://www.fishersci.com/store/msds?partNumber=AC168880050&productDescription=POTASSIUM+TERT-BUTOXIDE+5G&vendorId=VN00032119&countryCode=US&language=en
+sec-Butyllithium solution,598-30-1,,Sigma-Aldrich,100ml,<NA>,Pouriya's fumehood,3,2–8 C dry inert gas,"pyrophoric, water-reactive, highly flammable",https://www.fishersci.com/store/msds?partNumber=AC187541000&productDescription=SEC-BUTYLLITHIUM&vendorId=VN00032119&countryCode=US&language=en
+Sodium,7440-23-5,,Sigma-Aldrich,100g,<NA>,Pouriya's fumehood,1,rt dry inert gas,water-reactive; may ignite in air,https://www.cdhfinechemical.com/images/product/msds/51_414877350_SodiumMetal-CASNO-7440-23-5-MSDS.pdf
+Adipoyl chloride,111-50-2,,Sigma-Aldrich,25 g,<NA>,Pouriya's fumehood,2,rt dry,corrosive; reacts violently with water; lachrymator,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC173181000
+Titanium(IV) n-butoxide 99%,5593-70-4,,ACROS,500 mL,<NA>,Pouriya's fumehood,1,rt dry inert gas,combustible liquid; skin/eye irritant; moisture sensitive,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC223195000
+Thiourea,62-56-6,1,Sigma-Aldrich,100 g ,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",harmful; suspected carcinogen,https://pim-resources.coleparmer.com/sds/96579.pdf
+Urea,57-13-6,1,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; may cause mild irritation; combustible dust,https://www.carlroth.com/com/en/a-to-z/urea/p/x999.9
+Urea,57-13-6,1,Sigma-Aldrich,500 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; may cause mild irritation; combustible dust,https://www.carlroth.com/com/en/a-to-z/urea/p/x999.9
+guanidine hydrochloride,50-01-1,1,Acros Organics,100,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",harmful if swallowed or inhaled; skin/eye irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AAJ6548536&productDescription=GUANIDINE+HYDROCLRIDE+99%25+500G&vendorId=VN00024248
+Trifluoromethanesulfonamide,421-85-2,1,TCI,25g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; harmful,https://www.tcichemicals.com/US/en/sds/T1290_US_EN.pdf
+Guanadine hydrochloride,50-01-1,1,Sigma-Aldrich,500g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",harmful if swallowed or inhaled; skin/eye irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AAJ6548536&productDescription=GUANIDINE+HYDROCLRIDE+99%25+500G&vendorId=VN00024248
+Boric acid,10043-35-3,1,Mallinckrodt,2.27 kg,<NA>,Organics Upper Cabinets 217,1,"rt, dry",irritant; reproductive tox (at high doses),https://www.americanborate.com/media/19198/boric-acid-fg-10043-35-3-safety-data-sheet.pdf
+Glycine,56-40-6,2,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; dust may cause mechanical irritation,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AA4349722&productDescription=GLYCINE+ACS+98.5%2B%25+100G&vendorId=VN00024248
+Glycine,56-40-6,2,Sigma-Aldrich,1 kg,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; dust may cause mechanical irritation,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AA4349722&productDescription=GLYCINE+ACS+98.5%2B%25+100G&vendorId=VN00024248
+2-aminoethanethiol hydrochloride,156-57-0,2,Acros Organics,25,<NA>,Organics in Upper Cabinets 217,3,"rt, dry",harmful; irritant (skin/eyes/respiratory),https://www.spectrumchemical.com/MSDS/TCI-A0296.pdf
+3-Mercaptopropionic acid,107-96-0,2,Acros Organics,5ml,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; harmful; flammable liquid,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC105630051
+Glycolic acid,79-14-1,2,Sigma-Aldrich,1 L,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; harmful,https://www.spectrumchemical.com/media/sds/G1020_AGHS.pdf
+L-alanine,56-41-7,3,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; dust may cause mechanical irritation,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=BP369100&productDescription=L-ALANINE+100G&vendorId=VN00033897
+L-Cysteine,52-90-4,3,ICN,5 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; dust may cause irritation,https://www.spectrumrx.com/cas/pdf/index/cas-number/52-90-4/
+L-Cysteine hydrochloride monohydrate,7048-04-6,3,Sigma-Aldrich,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",harmful; irritant (skin/eyes/respiratory),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=C56225&productDescription=L+CYSTEINE+HCL+REAGENT+25G&vendorId=VN00033897
+L-Cysteine hydrochloride monohydrate,7048-04-6,3,Thermo,5,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",harmful; irritant (skin/eyes/respiratory),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=C56225&productDescription=L+CYSTEINE+HCL+REAGENT+25G&vendorId=VN00033897
+L-Cysteine,52-90-4,3,Sigma-Aldrich,25 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; dust may cause irritation,https://www.spectrumrx.com/cas/pdf/index/cas-number/52-90-4/
+Sodium 3-mercapto-1-propanesulfonate,17636-10-1,3,Sigma-Aldrich,100g,<NA>,Organics in Upper Cabinets 217,3,"rt, dry",irritant,https://www.Sigma-Aldrichaldrich.com/IN/en/product/aldrich/251682
+DL-Aspartic Acid,617-45-8,4,Acros Organics,250 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; dust may cause mechanical irritation,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AAA13646&productDescription=keyword&vendorId=VN00024248
+4-Aminopyridine,504-24-5,5,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",toxic; acute toxicity; neurotoxin,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/275875
+L-proline,147-85-3,5,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant,https://www.Sigma-Aldrichaldrich.com/US/en/sds/sial/62929
+L-valine,72-18-4,5,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant; harmful,https://www.Sigma-Aldrichaldrich.com/US/en/sds/sial/19038
+L-Glutamic Acid,56-86-0,5,Sigma-Aldrich,100g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; combustible dust,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AAA1503130&productDescription=L-GLUTAMIC+ACID+250G&vendorId=VN00024248
+Citric acid anhydrous ,77-92-9,6,Fisher Scientific,500 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant,https://www.Sigma-Aldrichaldrich.com/US/en/sds/sial/251275
+Citric Acid Monohydrate,5949-29-1,6,Fisher Scientific,500 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",serious eye damage; irritant,https://www.Sigma-Aldrichaldrich.com/sds/sial/c7129
+Hexamethylenediamine,124-09-4,6,Sigma-Aldrich,25 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; harmful,
+L-Cystine,56-89-3,6,Sigma-Aldrich,2.5 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; dust may cause irritation,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=BP377100&productDescription=L-CYSTINE+100G&vendorId=VN00033897
+L-Lysine,56-87-1,6,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; dust may cause irritation,https://www.Sigma-Aldrichaldrich.com/IN/en/sds/Sigma-Aldrich/l5501
+p-Benzoquinone,106-51-4,6,Alfa Aesar,250 g,<NA>,Organics in Upper Cabinets 217,1,rt,toxic; oxidizing; skin/eye irritant; sensitizer,https://www.Sigma-Aldrichaldrich.com/US/en/sds/sial/b10358
+L-Ascorbic Acid,50-81-7,6,Fisher Scientific,500 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; may cause irritation,https://www.Sigma-Aldrichaldrich.com/GB/en/sds/sial/a92902
+L-Ascorbic Acid,50-81-7,6,Sigma-Aldrich,25 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; may cause irritation,https://www.Sigma-Aldrichaldrich.com/GB/en/sds/sial/a92902
+L-Ascorbic Acid,50-81-7,6,Sigma-Aldrich,5 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; may cause irritation,https://www.Sigma-Aldrichaldrich.com/GB/en/sds/sial/a92902
+"N,N'-methylenebisacrylamide",110-26-9,7,Sigma-Aldrich,25 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",toxic; irritant; sensitizer,https://www.Sigma-Aldrichaldrich.com/US/en/sds/Sigma-Aldrich/m7279
+Benzoic Acid,65-85-0,7,Fisher Scientific,30 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant,https://www.Sigma-Aldrichaldrich.com/sds/sial/242381
+2-acrylamido-2-methyl-propansulfonic acid,15214-89-8,7,Sigma-Aldrich,250g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; irritant,https://www.tcichemicals.com/US/en/p/A0926
+1N-Acetyl-Cystine,616-91-1,7,Sigma-Aldrich,50g,<NA>,Organics in Upper Cabinets 217,2,"rt, dry",not classified; may cause irritation,https://www.Sigma-Aldrichaldrich.com/sds/sial/a7250
+1N-Acetyl-Cystine,616-91-1,7,Sigma-Aldrich,25g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; may cause irritation,https://www.Sigma-Aldrichaldrich.com/sds/sial/a7250
+Naphthalene,91-20-3,10,Sigma-Aldrich,100g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",flammable solid; harmful; suspected carcinogen; aquatic toxic,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=N134500
+11-Mercapto-1-undecanol,73768-94-2,11,Sigma-Aldrich,1 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant; harmful,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/451593
+trimethyloctylammonium bromide,2083-68-3,11,Sigma-Aldrich,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/13118
+n-octyltrimethylammonium bromide,2083-68-3,11,TCI,25,<NA>,Organics in Upper Cabinets 217,2,"rt, dry",irritant,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/13118
+11-mercaptoundecanoic acid,71310-21-9,11,Sigma-Aldrich,5,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant; harmful; aquatic toxic,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/450561
+Thianthrene,92-85-3,12,Sigma-Aldrich,25g,<NA>,Organics in Upper Cabinets 217,2,"rt, dry",combustible solid; harmful; irritant,https://www.chemicalbook.com/msds/thianthrene.pdf
+2-Hydroxy-4'-(2-hydroxyethoxy)-2-methylpropiophenone,106797-53-9,13,Sigma-Aldrich,10 g,<NA>,Organics in Upper Cabinets 217,2,"rt, dry",irritant; skin sensitizer,https://www.cellink.com/wp-content/uploads/2022/03/5200-Photoinitiator-IRG-3.pdf
+Benzophenone,119-61-9,13,Sigma-Aldrich,250 g,<NA>,Organics in Upper Cabinets 217,1,rt,suspected carcinogen; irritant; aquatic toxic,https://www.spectrumchemical.com/media/sds/B1088_AGHS.PDF
+decyltrimethylammonium bromide,2082-84-0,13,Acros Organics,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant; corrosive,https://files.carlroth.com/mres/en/sdb/3/SDB_3020_US_EN.pdf
+Benzophenone,119-61-9,13,Sigma-Aldrich,25g,<NA>,Organics in Upper Cabinets 217,1,rt,suspected carcinogen; irritant; aquatic toxic,https://www.spectrumchemical.com/media/sds/B1088_AGHS.PDF
+dodecyltrimethylammonium bromide,1119-94-4,15,Sigma-Aldrich,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant; corrosive,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC148170050
+n-dodecyltrimethylammonium chloride,112-00-5,15,TCI,25,<NA>,Organics in Upper Cabinets 217,5,"rt, dry",harmful if swallowed; eye/skin irritant; aquatic toxicity,https://www.dcfinechemicals.com/catalogo/Hojas%20de%20seguridad%20(EN)/105550-SDS-EN.pdf
+dodecyltrimethylammonium bromide,1119-94-4,15,Sigma-Aldrich,100,<NA>,Organics in Upper Cabinets 217,2,"rt, dry",irritant; corrosive,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC148170050
+1-hexadecanesulfonic acid sodium salt,15015-81-3,16,fluka,5g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; may cause irritation,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AAB20382&productDescription=keyword&vendorId=VN00024248
+Tetrabutylammonium chloride,1112-67-0,16,Sigma-Aldrich,10 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry, inert gas",irritant; harmful,https://www.fishersci.be/chemicalProductData_uk/wercs?itemCode=10614662&lang=EN
+16-mercaptohexadecanoic acid,69839-68-5,16,Sigma-Aldrich,1,<NA>,Organics in Upper Cabinets 217,2,"rt, dry",irritant; harmful,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/637239
+1-dodecylpyridinium chloride hydrate,207234-02-4,17,Sigma-Aldrich,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; aquatic toxicity,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AAB23492&productDescription=keyword&vendorId=VN00024248
+"1-octadecanol, 99%",112-92-5,18,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/o1000
+Hexadecyltrimethylammonium bromide,57-09-0,19,Fluka,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",harmful; serious eye damage; aquatic toxicity,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC227160100&productDescription=CETYLTRIMETHYLAMMONIUM+B+10GR&vendorId=VN00032119
+benzyldimethyldodecylammonium bromide,7281-04-1,19,Sigma-Aldrich,25,<NA>,Organics in Upper Cabinets 217,3,"rt, dry",corrosive; aquatic toxicity,https://www.Sigma-Aldrichaldrich.com/sds/aldrich/13373
+hexadecyltrimethylammonium chloride,0112-02-07,19,kodak,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; aquatic toxicity,https://www.Sigma-Aldrichaldrich.com/sds/aldrich/52366
+tetrapentylammonium bromide,866-97-7,20,Acros Organics,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",harmful; irritant,https://www.spectrumchemical.com/MSDS/TCI-T1432.pdf
+1-Hexadecylpyridinium chloride monohydrate,6004-24-6,21,Acros Organics,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; harmful,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/52345
+Cetylpyridinium chloride,6004-24-6,21,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; harmful,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/52345
+Octadecyltrimethylammonium bromide,1120-02-01,21,Sigma-Aldrich,10,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",harmful; serious eye damage; aquatic toxicity,https://assets.thermofisher.cn/directwebviewer/private/results.aspx?LANGUAGE=d__EN&PLANT=d__ALF&SKU=ALFAAA15235&SUBFORMAT=d__CGV4&page=NewSearch
+didodecyldimethylammonium bromide,3282-73-3,26,kodak,25,<NA>,Organics in Upper Cabinets 217,2,"rt, dry",corrosive; acute tox; aquatic toxic,https://www.scbt.com/p/safety-data-sheet?document=sc-253920
+dimethylditetradecylammonium bromide,68105-02-02,31,Sigma-Aldrich,5,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; aquatic toxicity,https://www.Sigma-Aldrichaldrich.com/US/en/search/68105-02-2?focus=products&term=68105-02-2&type=cas_number
+tetra-n-octylammonium bromide,14866-33-2,32,Acros Organics,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry, inert gas",irritant,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/294136
+tetraoctylammonium bromide,14866-33-2,32,Sigma-Aldrich,25g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry, inert gas",irritant,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/294136
+"Iron(III) tris(2,2,6,6-tetramethyl-3,5-heptanedionate)",14876-47-2,33,Sigma-Aldrich,1 g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",not classified; dust may cause irritation,https://www.aaronchem.com/sds/14876-47-2.pdf
+paraformaldehyde,30535-89-4,99,Acros Organics,500g,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",toxic; skin/eye irritant; sensitizer; suspected carcinogen; flammable solid,https://www.spectrumchemical.com/media/sds/P1010_AGHS.pdf
+DL-threonine,80-68-2,4,Sigma-Aldrich,10 g,<NA>,Organics in Upper Cabinets 217,1,,,
+4-Methoxyphenol,150-76-5,7,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,,,
+2-aminoethanesulfonic acid (TAURINE),107-35-7,2,Sigma-Aldrich,50 g,<NA>,Organics in Upper Cabinets 217,1,,,
+2-mercaptobenzimidazole,583-39-1,7,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,,,
+4-(dimethylamino)pyridine,1122-58-3,7,Sigma-Aldrich,25 g,<NA>,Organics in Upper Cabinets 217,2,,,
+4-(Dimethylamino)benzaldehyde,0100-10-7,9,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,,,
+Ninhydrin,485-47-2,9,Sigma-Aldrich,10 g,<NA>,Organics in Upper Cabinets 217,1,,,
+Glutathione,70-18-8,10,Acros Organics,5 g,<NA>,Organics in Upper Cabinets 217,1,,,
+Sebacic acid,111-20-6,10,Sigma-Aldrich,250 g,<NA>,Organics in Upper Cabinets 217,1,,,
+Ethylenediaminetetraacetic acid disodium salt dihydrate,6381-92-6,10,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,,,
+p-Toluenesulfonyl chloride,98-59-9,7,Sigma-Aldrich,100 g,<NA>,Organics in Upper Cabinets 217,1,,,
+Glycolic acid,79-14-1,2,Sigma-Aldrich,1 L,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; harmful,https://www.spectrumchemical.com/media/sds/G1020_AGHS.pdf
+Glycerol,56-81-5,3,Sigma-Aldrich,500 mL,<NA>,Organics in Upper Cabinets 217,1,rt,not classified; avoid contact,https://assets.thermofisher.com/DirectWebViewer/private/results.aspx?LANGUAGE=d__EN&PLANT=d__ALF&SKU=ALFAAA16205&SUBFORMAT=d__CGV4&page=NewSearch
+Benzyldimethyl tetradecyl ammonium chloride dihydrate,147228-81-7,3,Sigma-Aldrich,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",corrosive; aquatic toxicity,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/292796
+4-(Aminomethyl)pyridine,3731-53-1,6,Sigma-Aldrich,25 g,<NA>,Organics in Upper Cabinets 217,1,"rt, inert gas",corrosive; flammable liquid; harmful,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AAL06345
+octyltrimethylammonium bromide,2083-68-3,11,Fluka,25,<NA>,Organics in Upper Cabinets 217,1,"rt, dry",irritant,https://www.Sigma-Aldrichaldrich.com/US/en/sds/aldrich/13118
+Aluminum Hydroxide,21645-51-2,,Fischer Scientific,500 g,<NA>,Lower Cabinet 217,1,rt,irritant (nuisance dust),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC219130250
+Aluminum oxide,1344-28-1,,Sigma-Aldrich,1 kg,<NA>,Lower Cabinet 217,1,rt,irritant (nuisance dust),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC212250250
+"Aluminum Oxide, Basic",1344-28-1,,Thermo Scientific,1kg,<NA>,Lower Cabinet 217,1,rt,irritant (nuisance dust),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC212250250
+"Aluminum oxide, basic",1344-28-1,,sigma-aldrich,1kg,<NA>,Lower Cabinet 217,1,rt,irritant (nuisance dust),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC212250250
+"Aluminum oxide, powder, primarily alpha phase, <= 10 microns",1344-28-1,,Sigma Aldrich,2.5 kg,<NA>,Lower Cabinet 217,1,rt,irritant (nuisance dust),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC212250250
+Calcium Acetate ,5743-26-0,,Fisher Scientific,500 g,<NA>,Lower Cabinet 217,1,rt dry,irritant,https://www.fishersci.com/content/dam/fishersci/en_US/documents/programs/education/regulatory-documents/sds/chemicals/chemicals-c/S25218.pdf
+Calcium Carbonate,471-34-1,,Fischer Chemical,500 g,<NA>,Lower Cabinet 217,1,rt,irritant (nuisance dust),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=C64500
+Calcium Carbonate ,471-34-1,,Aldrich Chemical Company,500 g,<NA>,Lower Cabinet 217,1,rt,irritant (nuisance dust),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=C64500
+Calcium Chloride Anhydrous,10043-52-4,,Fisher,500g,<NA>,Lower Cabinet 217,2,rt dry,irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=C77500
+Calcium Chloride Dihydrate,10035-04-8,,Fisher,500 g,<NA>,Lower Cabinet 217,1,rt dry,irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=C79500
+Calcium Chloride dihydrate,10035-04-8,,Acros,500g,<NA>,Lower Cabinet 217,1,rt dry,irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=C79500
+"Calcium Chloride, dessicant, 96+% ",10043-52-4,,Sigma Aldrich,100 g,<NA>,Lower Cabinet 217,1,rt dry,irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=C77500
+Calcium Dihydrogen phosphate dihyrdate,301524-28-7,,aldrich,1 kg,<NA>,Lower Cabinet 217,1,rt,irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AAA12123
+Calcium fluoride,7789-75-5,,Alfa,100g,<NA>,Lower Cabinet 217,1,rt,irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=C89250
+Calcium Hydroxide,1305-62-0,,Acros Organics,100 g ,<NA>,Lower Cabinet 217,1,rt dry,irritant; eye damage,https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/PDF/24886417
+Calcium Hydroxide,1305-62-0,,Fisher ,500 g,<NA>,Lower Cabinet 217,1,rt dry,irritant; eye damage,https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/PDF/24886417
+Calcium Nitrate Tetrahydrate ,13477-34-4,,Sigma-Aldrich,500 g,<NA>,Lower Cabinet 217,1,rt dry,oxidizer; irritant,https://sds.aquaphoenixsci.com/SDS/184910_S25226_GHSUnitedStatesSDS_en_2018-02-12.pdf
+Calcium Phosphate dibasic dihydrate 98+% extra pure ,7789-77-7,,Acros Organics,1 kg,<NA>,Lower Cabinet 217,1,rt,irritant,https://www.carlroth.com/medias/SDB-HN70-GB-EN.pdf
+Calcium Sulfate Dihydrate,,,ALDRICH,100g,<NA>,Lower Cabinet 217,1,rt,nuisance dust; irritant,https://www.sigmaaldrich.com/sds/sigald/255548
+Iron(III) nitrate nonahydrate,7782-61-8,,sigma-aldrich,250g,<NA>,Lower Cabinet 217,1,rt dry,oxidizer; corrosive; irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC423715000
+Lithium Hydroxide,1310-65-2,,ALDRICH,100g,<NA>,Lower Cabinet 217,1,rt dry,corrosive; harmful if swallowed,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC611545000
+Potassium hydroxide pellets,1310-58-3,,Fisher Scientific,3 kg,<NA>,Lower Cabinet 217,1,rt dry,corrosive,https://www.sigmaaldrich.com/US/en/sds/aldrich/306576
+Potassium hydroxide pellets,1310-58-3,,Sigma-Aldrich,500 g,<NA>,Lower Cabinet 217,1,rt dry,corrosive,https://www.sigmaaldrich.com/US/en/sds/aldrich/306576
+Sodium hydroxide,1310-73-2,,Sigma-Aldrich,25 g,<NA>,Lower Cabinet 217,1,rt dry,corrosive,https://www.sigmaaldrich.com/US/en/sds/sial/s5881
+Sodium Phosphate dibasic heptahydrate,7782-85-6,,Fisher,500g,<NA>,Lower Cabinet 217,1,rt,irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=S3733
+3-(aminopropyl)triethoxysilane,919-30-2,,Aldrich,500mL,<NA>,Silanes PN hood,1,rt dry inert gas,corrosive; severe burns; harmful if inhaled,https://s3.amazonaws.com/gelest/sds/SIA0610.0_GHS%2BUS_English%2BUS.pdf
+"CARBOXYETHYLSILANETRIOL, DISODIUM SALT, 25% in water",18191-40-7,,,25 mL,<NA>,Silanes PN hood,3,rt,eye/skin irritant,https://s3.amazonaws.com/gelest/sds/SIC2263.0_GHS%20EU_English.pdf
+3-(aminopropyl)triethoxysilane,919-30-2,,acros,500g,<NA>,Silanes PN hood,2,rt dry inert gas,corrosive; severe burns; harmful if inhaled,https://s3.amazonaws.com/gelest/sds/SIA0610.0_GHS%2BUS_English%2BUS.pdf
+3-(aminopropyl)triethoxysilane,919-30-2,,Aldrich,100mL,<NA>,Silanes PN hood,2,rt dry inert gas,corrosive; severe burns; harmful if inhaled,https://s3.amazonaws.com/gelest/sds/SIA0610.0_GHS%2BUS_English%2BUS.pdf
+3-(aminopropyl)triethoxysilane,919-30-2,,Alfa Aesar,100g,<NA>,Silanes PN hood,1,rt dry inert gas,corrosive; severe burns; harmful if inhaled,https://s3.amazonaws.com/gelest/sds/SIA0610.0_GHS%2BUS_English%2BUS.pdf
+Trimethylmethoxysilane,1825-61-2,,GELEST,25,<NA>,Silanes PN hood,1,rt dry inert gas,combustible; eye/skin irritant; releases methanol on hydrolysis,https://www.sigmaaldrich.com/US/en/sds/ALDRICH/253006
+pentamethyl cyclopentasiloxane,6166-86-5,,GELEST,25,<NA>,Silanes PN hood,1,rt,combustible liquid; eye/skin irritant,https://www.gelest.com/wp-content/uploads/product_msds/SIP6718.0-msds.pdf
+N-(2-aminoethyl)-3-aminopropylslanetriol,68400-09-9,,GELEST,100,<NA>,Silanes PN hood,1,rt,eye/skin irritant,https://s3.amazonaws.com/gelest/sds/SIA0590.0_GHS%2BUS_English%2BUS.pdf
+t-butyldimethylsilanol,18173-64-3,,GELEST,5,<NA>,Silanes PN hood,1,rt dry,flammable; eye/skin irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AAL16541
+hexamethyldisilazane,999-97-3,,GELEST,25,<NA>,Silanes PN hood,1,rt dry,flammable; causes severe skin burns and eye damage; harmful if inhaled,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC120580100
+"(3,3,3-trifluoropropyl)trimethoxsilane",429-60-7,,UCT SPECIALITES,25,<NA>,Silanes PN hood,1,rt dry,eye/skin irritant; STOT SE 3 (resp),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC392470250
+3-aminopropyltrimethoxysilane,13822-56-5,,GELEST,25,<NA>,Silanes PN hood,1,rt dry inert gas,corrosive; severe burns; harmful if inhaled,https://www.tcichemicals.com/US/en/sds/A2128_US_EN.pdf
+3-chloropropyldimethylmethoxysilane,18171-14-7,,GELEST,10,<NA>,Silanes PN hood,1,rt dry,flammable; eye/skin irritant,https://www.gelest.com/wp-content/uploads/product_msds/SIC2338.0-msds.pdf
+3-mercaptopropyl-trimethoxysilane,4420-74-0,,GELEST,100,<NA>,Silanes PN hood,1,rt dry,flammable; eye/skin irritant; skin sensitizer,https://assets.fishersci.com/TFS-Assets/CCG/SDS/43909200_SDS.pdf
+"(3-Mercaptopropyl)-trimethoxysilane,95%",4420-74-0,,ALDRICH,25,<NA>,Silanes PN hood,2,rt dry,flammable; eye/skin irritant; skin sensitizer,https://assets.fishersci.com/TFS-Assets/CCG/SDS/43909200_SDS.pdf
+n-(2-aminoethyl)-3-aminopropyl-trimethoxysilane,1760-24-3,,GELEST,25,<NA>,Silanes PN hood,1,rt dry inert gas,corrosive; severe burns; harmful if inhaled,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC216535000
+n-methylaminopropyltrimethoxysilane,3069-25-8,,GELEST,25,<NA>,Silanes PN hood,1,rt dry inert gas,eye/skin irritant; STOT SE 3 (resp),https://s3.amazonaws.com/gelest/sds/SIM6500.0_GHS%20EU_English.pdf
+triethoxyvinylsilane,78-08-0,,ACROS,25,<NA>,Silanes PN hood,1,rt dry inert gas,flammable; eye/skin irritant; STOT SE 3 (resp),https://assets.thermofisher.com/DirectWebViewer/private/results.aspx?LANGUAGE=d__EN&PLANT=d__ALF&SKU=ALFAAB21037&SUBFORMAT=d__CGV4&page=NewSearch
+3-Aminopropyl triethoxysilane,919-30-2,,MP B,100ML,<NA>,Silanes PN hood,1,rt dry inert gas,corrosive; severe burns; harmful if inhaled,https://s3.amazonaws.com/gelest/sds/SIA0610.0_GHS%2BUS_English%2BUS.pdf
+phenyltrimethoxysilne,2996-92-1,,GELEST,100,<NA>,Silanes PN hood,1,rt dry,flammable; eye/skin irritant; STOT SE 3 (resp),https://www.sigmaaldrich.com/US/en/sds/aldrich/440931
+(3-Aminopropyl)triethoxysilane,919-30-2,,Fluka ,100 mL,<NA>,Silanes PN hood,3,rt dry inert gas,corrosive; severe burns; harmful if inhaled,https://s3.amazonaws.com/gelest/sds/SIA0610.0_GHS%2BUS_English%2BUS.pdf
+(3-Glycidoxypropyl)trimethoxysilane,2530-83-8,,Fluka,50ml,<NA>,Silanes PN hood,1,rt dry inert gas,skin/eye irritant; skin sensitizer; harmful if inhaled,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC216541000
+phenoxytrimethylsilane,1529-17-5,,GELEST,25,<NA>,Silanes PN hood,3,rt dry,flammable; eye/skin irritant,https://static.cymitquimica.com/products/3H/pdf/sds-SIP6723.5.pdf
+triethoxysilylbutyraldehyde,917773-12-7,,GELEST,10,<NA>,Silanes PN hood,1,rt dry inert gas,flammable; eye/skin irritant; STOT SE 3 (resp),https://s3.amazonaws.com/gelest/sds/SIT8185.3_GHS%20US_English%20US.pdf
+Methoxy(dimethyl)octylsilane,93804-29-6,,ALDRICH,5,<NA>,Silanes PN hood,1,rt dry,eye/skin irritant,https://www.tcichemicals.com/US/en/sds/M2893_US_EN.pdf
+3-Isocyanatopropyltriethoxysilane,24801-88-5,,GELEST,25,<NA>,Silanes PN hood,1,rt dry inert gas,corrosive; fatal if inhaled; respiratory/skin sensitizer,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC391900250
+"5,6-epoxyhexyltriethoxysilane",86138-01-4,,GELEST,10,<NA>,Silanes PN hood,1,rt dry inert gas,eye/skin irritant; skin sensitizer,https://www.gelest.com/wp-content/uploads/product_msds/SIV1115.0-msds.pdf
+n-phenylaminopropyltrimethoxysilane,3068-76-6,,GELEST,25,<NA>,Silanes PN hood,1,rt dry,harmful if swallowed; eye/skin irritant; aquatic chronic,https://content.labscoop.com/products/b3a67bc8-46aa-432e-a731-ca298e47a0c2/rcfeEV0044_US_EN.pdf
+phenethyltrimethoxysilane,49539-88-0,,GELEST,25,<NA>,Silanes PN hood,1,rt dry,flammable; eye/skin irritant,https://www.keyorganics.net/app/uploads/sds/FS-5025_SDS.pdf
+tetra-n-propoxysilane,682-01-9,,GELEST,100,<NA>,Silanes PN hood,1,rt dry inert gas,eye/skin irritant; STOT SE 3 (resp),https://www.sigmaaldrich.com/IN/en/sds/aldrich/679240
+"2-(3,4-epoxycyclohexyl)-ethyltriethoxysilane",3388-04-3,,GELEST,25,<NA>,Silanes PN hood,1,rt dry inert gas,eye/skin irritant; skin sensitizer,https://www.tcichemicals.com/US/en/sds/E0483_US_EN.pdf
+tetrapropoxysilane,682-01-9,,ACROS,25ml,<NA>,Silanes PN hood,1,rt dry inert gas,eye/skin irritant; STOT SE 3 (resp),https://www.sigmaaldrich.com/IN/en/sds/aldrich/679240
+"n(trimethoxy sillyl propyl ethylenediamine, triacetic acid)",128850-89-5,,GELEST,25g,<NA>,Silanes PN hood,2,rt,eye/skin irritant,https://www.chemsrc.com/msds/128850-89-5_msds.pdf
+n-octyltriethoxysilane,2943-75-1,,ACROS,25ml,<NA>,Silanes PN hood,1,rt dry,flammable; eye/skin irritant,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC338080250
+tetra-n-butoxysilane,4766-57-8,,GELEST,100,<NA>,Silanes PN hood,1,rt dry inert gas,eye/skin irritant; STOT SE 3 (resp),https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC313690050
+Bis(triethoxysilylpropyl)amine,13497-18-2,,GELEST,25,<NA>,Silanes PN hood,1,rt dry,eye/skin irritant,https://msds.evonik.com/0000354037_99034876_1072_SDS_GHS_EN_V2.2.pdf
+n-octrdecyltrimethoxysilane,3069-42-9,,GELEST,25,<NA>,Silanes PN hood,1,rt dry,eye/skin irritant,https://www.alfa.com/en/msds/?language=EN&subformat=MSDS_CSTM&sku=O0359
+octadecyldimethylmethoxysilane,71808-65-6,,UCT SPECIALITES,25,<NA>,Silanes PN hood,1,rt dry,eye/skin irritant,https://www.chemicalbook.com/msds/octadecyldimethylmethoxysilane.htm
+2-(methoxy(polyethylenoxy)-propyl)9-12trimethoxysilane,65994-07-2,,GELEST,25,<NA>,Silanes PN hood,2,rt,eye/skin irritant,https://www.gelest.com/wp-content/uploads/product_msds/SIM6492.72-msds.pdf
+2-(methoxy(polyethylenoxy)-propyl)trimethoxysilane,65994-07-2,,GELEST,25,<NA>,Silanes PN hood,1,rt,eye/skin irritant,https://www.gelest.com/wp-content/uploads/product_msds/SIM6492.72-msds.pdf
+2-(methoxy(polyethylenoxy)-propyl)trimethoxysilane,65994-07-2,,GELEST,100,<NA>,Silanes PN hood,1,rt,eye/skin irritant,https://www.gelest.com/wp-content/uploads/product_msds/SIM6492.72-msds.pdf
+"diethoxymethylsilyl modified Poly-1,2-butadiene",,,GELEST,100,<NA>,Silanes PN hood,1,rt,combustible; eye/skin irritant,
+,,,,,<NA>,,1,,,
+,,, ,,<NA>,,1,,,
+3-(trihydroxysilyl)-1-propane-sulfonic acid,70942-24-4,,GELEST,25,<NA>,Yunxiu's fume hood,1,rt,corrosive,https://s3.amazonaws.com/gelest/sds/SIT8378.3_GHS%2BUS_English%2BUS.pdf
+Bicinchoninic acid solution,1245-13-2,,Sigma-Aldrich,1 L,<NA>,Yunxiu's fume hood,1,rt,irritant,https://datasheets.scbt.com/sc-288354.pdf
+"Formic acid, 98-100%, extra pure",64-18-6,,Fisher Scientific,1 L,<NA>,Yunxiu's fume hood,1,rt,"flammable, corrosive, toxic (inhalation)",https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC147930250
+Formic acid,64-18-6,,Fisher Scientific,50 mL,<NA>,Yunxiu's fume hood,1,rt,"flammable, corrosive, toxic (inhalation)",https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC147930251
+Hydrochloric Acid,7647-01-0,,Fisher Scientific,2.5 L,<NA>,Yunxiu's fume hood,1,rt,"corrosive, toxic (inhalation)",https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC450550025
+Hydrochloric Acid,7647-01-0,,Fisher Scientific,500 mL,<NA>,Yunxiu's fume hood,1,rt,"corrosive, toxic (inhalation)",https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC450550025
+"Hydrochloric Acid, ACS reagent 37%",7647-01-0,,Sigma-Aldrich,25 mL,<NA>,Yunxiu's fume hood,3,rt,"corrosive, toxic (inhalation)",https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC450550025
+methane sulfonic acid,75-75-2,,Sigma-Aldrich,500 mL,<NA>,Yunxiu's fume hood,1,rt,corrosive,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC125612500
+methane sulfonic acid,75-75-2,,Sigma-Aldrich,100 g,<NA>,Yunxiu's fume hood,1,rt,corrosive,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC125612500
+Nitric acid,7697-37-2,,Fisher Scientific,2.5L,<NA>,Yunxiu's fume hood,3,rt,"oxidizer, corrosive, toxic (inhalation)",https://www.sigmaaldrich.com/US/en/sds/sial/695041
+"o-Phosphoric Acid, 85%",7664-38-2,,Fisher Scientific,500 mL,<NA>,Yunxiu's fume hood,2,rt,corrosive,https://www.columbuschemical.com/MSDS/SDS/Phosphoric%20Acid%2085%25%20ACS%204035.pdf
+Oxalic acid,144-62-7,,Sigma-Aldrich,50 g,<NA>,Yunxiu's fume hood,1,rt,"toxic, eye damage",https://www.sigmaaldrich.com/US/en/sds/sial/75688
+p-Toluenesulfonic acid monohydrate,6192-52-5,,Sigma-Aldrich,100 g,<NA>,Yunxiu's fume hood,1,rt,corrosive,https://www.tcichemicals.com/BE/en/sds/T0267_EU_6N.pdf
+Phosphoric acid diphenyl methyl phenyl ester,26444-49-5,,Alfa Aesar,100mL,<NA>,Yunxiu's fume hood,1,rt,aquatic toxicity,https://assets.thermofisher.com/DirectWebViewer/private/results.aspx?LANGUAGE=d__EN&PLANT=d__ALF&SKU=ALFAA42092&SUBFORMAT=d__CGV4&page=NewSearch
+Phosphotungstic Acid Solution ,12501-23-4,,Sigma-Aldrich,250 mL,<NA>,Yunxiu's fume hood,2,rt,corrosive,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC208311000
+Phosphotungstic Acid Solution 1% Aqueous Solution,12501-23-4,,Electron Microscopy Sciences,500 mL,<NA>,Yunxiu's fume hood,1,rt,corrosive,https://www.fishersci.com/store/msds?countryCode=US&language=en&partNumber=AC208311000
+Stearic Acid,57-11-4,,TCI,500 g,<NA>,Yunxiu's fume hood,1,rt,low hazard,https://www.sigmaaldrich.com/US/en/sds/sial/175366
+Sulfuric Acid,7664-93-9,,Fisher Scientific,2.5 L,<NA>,Yunxiu's fume hood,1,rt,corrosive,https://www.sigmaaldrich.com/US/en/sds/aldrich/339741
+"Trifluoroacetic acid, peptide synthesis grade",76-05-1,,Applied Biosystems,450 mL,<NA>,Yunxiu's fume hood,1,rt,"corrosive, toxic (inhalation)",https://www.fishersci.com/store/msds?countryCode=US&keyword=true&language=en&partNumber=BP618500&productDescription=trifluoroacetic-acid-peptide-synthesis-grade-fisher-bioreagentstrade&vendorId=VN00033897
+"Trifluoroacetic acid, peptide synthesis grade",76-05-1,,Fisher Scientific,500 mL,<NA>,Yunxiu's fume hood,2,rt,"corrosive, toxic (inhalation)",https://www.fishersci.com/store/msds?countryCode=US&keyword=true&language=en&partNumber=BP618500&productDescription=trifluoroacetic-acid-peptide-synthesis-grade-fisher-bioreagentstrade&vendorId=VN00033897
+Acetic acid,64-19-7,,Sigma-Aldrich,2.5 L,<NA>,Yunxiu's fume hood,1,rt,"flammable, causes skin burns",https://www.sigmaaldrich.com/US/en/sds/sigald/695092?userType=anonymous
+Glacial acetic acid,64-19-7,,Fisher Scientific,2.5 L,<NA>,Yunxiu's fume hood,1,rt,"flammable, causes skin burns",https://www.sigmaaldrich.com/US/en/sds/sigald/695092?userType=anonymous
