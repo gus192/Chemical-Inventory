@@ -8,5 +8,5 @@ xlrd>=2.0        # for legacy .xls
 odfpy>=1.4       # for .ods
 
 # Optional Google Sheets backend (uncomment if you switch to Sheets)
-# gspread>=6.0.0
-# google-auth>=2.23.0
+gspread>=6.0.0
+google-auth>=2.23.0
