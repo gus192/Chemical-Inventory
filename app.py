@@ -58,6 +58,7 @@ def load_data() -> pd.DataFrame:
         except Exception:
             return pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID])
     return pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID])
+    return pd.DataFrame(columns=EXPECTED_COLS)
 
 def save_data(df: pd.DataFrame):
     df = df.copy()
@@ -239,32 +240,32 @@ with t3:
     st.title("📂 Upload or Merge Spreadsheet(s)")
     st.caption("Drop in CSV or Excel files. Supported: CSV, XLSX/XLSM/XLTX/XLTM, XLS, ODS.")
 
-    def _read_excel_smart(file):
+    def _read_table(file):
         name = file.name.lower()
         ext = os.path.splitext(name)[1]
         try:
-            if ext in (".xlsx", ".xlsm", ".xltx", ".xltm"):
+            if ext == ".csv":
+                return pd.read_csv(file)
+            elif ext in (".xlsx", ".xlsm", ".xltx", ".xltm"):
                 return pd.read_excel(file, engine="openpyxl")
             elif ext == ".xls":
                 return pd.read_excel(file, engine="xlrd")
             elif ext == ".ods":
                 return pd.read_excel(file, engine="odf")
             else:
-                raise ValueError(f"Unsupported Excel extension: {ext}")
+                raise ValueError(f"Unsupported file type: {ext}")
         except ImportError as e:
             st.error(
-                "Missing Excel engine. Add the following to requirements.txt and redeploy:
-"
-                "`openpyxl` (for .xlsx), `xlrd` (for .xls), `odfpy` (for .ods).
+                "Missing Excel engine. Add the following to requirements.txt and redeploy:"
+                "`openpyxl` (for .xlsx), `xlrd` (for .xls), `odfpy` (for .ods)."
 
-"
                 f"Details: {e}"
             )
             raise
 
     upl = st.file_uploader(
         "Upload CSV/XLSX/XLS/ODS",
-        type=["csv","xlsx","xls","xlsm","xltx","xltm","ods"],
+        type=["csv", "xlsx", "xls", "xlsm", "xltx", "xltm", "ods"],
         accept_multiple_files=True,
     )
 
@@ -272,11 +273,7 @@ with t3:
         frames = []
         for f in upl:
             try:
-                if f.name.lower().endswith(".csv"):
-                    raw = pd.read_csv(f)
-                else:
-                    raw = _read_excel_smart(f)
-                frames.append(raw)
+                frames.append(_read_table(f))
             except Exception as e:
                 st.error(f"Failed to read {f.name}: {e}")
         if frames:
@@ -286,10 +283,12 @@ with t3:
             if st.button("Apply Upload"):
                 save_data(merged)
                 st.success("Upload applied ✅")
+        else:
+            st.warning("No valid files were loaded.")
 
 # ---------- Settings ----------
 with t4:
     st.title("⚙️ Settings & Tips")
     if st.button("Reset to blank inventory"):
-        save_data(pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID]))
+        save_data(pd.DataFrame(columns=EXPECTED_COLS))
         st.success("Inventory reset.")
