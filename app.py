@@ -175,6 +175,79 @@ with t1:
                     new_df = df[~df[ROW_ID].astype(str).eq(selected_id)]
                     save_data(new_df)
                     st.success("Row deleted. Refresh to see changes.")
+
+                # ----------------- Edit single row -----------------
+                st.markdown("**Edit a single row:**")
+                # Reuse the same options list for labels
+                options_e = options
+                labels_e = labels
+                selected_label_e = st.selectbox("Pick row to edit", labels_e, key=f"rowedit_select_{key_suffix}")
+                selected_id_e = dict(options_e).get(selected_label_e)
+
+                if selected_id_e:
+                    match_idx = df.index[df[ROW_ID].astype(str).eq(selected_id_e)]
+                    if len(match_idx) == 0:
+                        st.warning("Could not find the selected row. Try refreshing.")
+                    else:
+                        idx = match_idx[0]
+                        current_row = df.loc[idx]
+                        with st.form(f"edit_form_{key_suffix}"):
+                            c1, c2 = st.columns(2)
+                            with c1:
+                                e_name = st.text_input("Chemical Name", value=str(current_row.get("name","")), key=f"e_name_{key_suffix}")
+                                e_cas = st.text_input("CAS Number", value=str(current_row.get("cas","")), key=f"e_cas_{key_suffix}")
+                                e_carbons = st.text_input("Carbons", value=("" if pd.isna(current_row.get("carbons")) else str(current_row.get("carbons",""))), key=f"e_carbons_{key_suffix}")
+                                e_distributor = st.text_input("Distributor", value=str(current_row.get("distributor","")), key=f"e_dist_{key_suffix}")
+                                e_size = st.text_input("Container Size", value=str(current_row.get("container_size","")), key=f"e_size_{key_suffix}")
+                            with c2:
+                                state_options = ["Solid","Liquid","Gas","Unknown"]
+                                cur_state = str(current_row.get("state","Unknown")) or "Unknown"
+                                try:
+                                    state_index = state_options.index(cur_state) if cur_state in state_options else 3
+                                except Exception:
+                                    state_index = 3
+                                e_state = st.selectbox("State", state_options, index=state_index, key=f"e_state_{key_suffix}")
+
+                                df_now = load_data()
+                                locations_existing = sorted([x for x in df_now["location"].dropna().unique().tolist() if str(x).strip()])
+                                default_loc = str(current_row.get("location",""))
+                                initial_options = ["(new)"] + locations_existing
+                                try:
+                                    init_index = initial_options.index(default_loc) if default_loc in initial_options else 0
+                                except Exception:
+                                    init_index = 0
+                                e_location_choice = st.selectbox("Storage Location", options=initial_options, index=init_index, key=f"e_loc_choice_{key_suffix}")
+                                if e_location_choice == "(new)":
+                                    e_location = st.text_input("Enter new location", value=default_loc, key=f"e_loc_new_{key_suffix}")
+                                else:
+                                    e_location = e_location_choice
+
+                                e_bottles = st.number_input("Number of Bottles", min_value=1, value=int(current_row.get("bottles",1) or 1), key=f"e_bottles_{key_suffix}")
+                                e_storage = st.text_input("Storage Conditions", value=str(current_row.get("storage_conditions","")), key=f"e_storage_{key_suffix}")
+                                e_haz = st.text_area("Hazards (from SDS)", value=str(current_row.get("hazards","")), key=f"e_haz_{key_suffix}")
+                                e_sds = st.text_input("Link to SDS", value=str(current_row.get("sds_link","")), key=f"e_sds_{key_suffix}")
+
+                            save_edit = st.form_submit_button("💾 Save changes")
+                        if save_edit:
+                            df.at[idx, "name"] = e_name
+                            df.at[idx, "cas"] = e_cas
+                            if e_carbons and str(e_carbons).strip():
+                                try:
+                                    df.at[idx, "carbons"] = int(e_carbons)
+                                except Exception:
+                                    df.at[idx, "carbons"] = pd.NA
+                            else:
+                                df.at[idx, "carbons"] = pd.NA
+                            df.at[idx, "distributor"] = e_distributor
+                            df.at[idx, "container_size"] = e_size
+                            df.at[idx, "state"] = e_state
+                            df.at[idx, "location"] = e_location
+                            df.at[idx, "bottles"] = int(e_bottles) if e_bottles else 1
+                            df.at[idx, "storage_conditions"] = e_storage
+                            df.at[idx, "hazards"] = e_haz
+                            df.at[idx, "sds_link"] = e_sds
+                            save_data(df)
+                            st.success("Row updated. Switch tabs or refresh to see changes.")
             else:
                 st.caption("No rows to delete in this view.")
 
@@ -238,8 +311,9 @@ with t2:
 # ---------- Upload / Merge ----------
 with t3:
     st.title("📂 Upload or Merge Spreadsheet(s)")
-    st.caption("Drop in CSV or Excel files. Supported: CSV, XLSX/XLSM/XLTX/XLTM, XLS, ODS.")
+    st.caption("Upload CSV or Excel. You can Replace, Append, or Merge/Upsert into the current inventory.")
 
+    # --- File readers with Excel engines ---
     def _read_table(file):
         name = file.name.lower()
         ext = os.path.splitext(name)[1]
@@ -258,35 +332,158 @@ with t3:
             st.error(
                 "Missing Excel engine. Add the following to requirements.txt and redeploy:"
                 "`openpyxl` (for .xlsx), `xlrd` (for .xls), `odfpy` (for .ods)."
-
                 f"Details: {e}"
             )
             raise
 
-    upl = st.file_uploader(
+    # --- Normalization helper (align columns/types) ---
+    def _ensure_schema(df: pd.DataFrame) -> pd.DataFrame:
+        df = df.copy()
+        for c in EXPECTED_COLS:
+            if c not in df.columns:
+                df[c] = pd.NA
+        for c in ["name","cas","distributor","container_size","state","location","storage_conditions","hazards","sds_link"]:
+            df[c] = df[c].astype(str).replace({"nan": ""}).fillna("")
+        df["bottles"] = pd.to_numeric(df["bottles"], errors="coerce").fillna(1).astype(int)
+        df["carbons"] = pd.to_numeric(df["carbons"], errors="coerce")
+        keep_cols = EXPECTED_COLS + ([ROW_ID] if ROW_ID in df.columns else [])
+        return df[keep_cols]
+
+    def _make_keycols(df: pd.DataFrame, keys: list[str]) -> pd.Series:
+        """Build a normalized composite key (case-insensitive) for matching."""
+        if not keys:
+            return pd.Series([""] * len(df), index=df.index)
+        subset = df.reindex(columns=keys, fill_value="").astype(str)
+        return subset.apply(lambda row: "::".join(str(x).strip().lower() for x in row.values), axis=1)
+
+    # --- Uploader ---
+    uploaded_files = st.file_uploader(
         "Upload CSV/XLSX/XLS/ODS",
         type=["csv", "xlsx", "xls", "xlsm", "xltx", "xltm", "ods"],
         accept_multiple_files=True,
+        key="upload_merge_files",
     )
 
-    if upl:
+    if uploaded_files is not None and len(uploaded_files) > 0:
         frames = []
-        for f in upl:
+        for f in uploaded_files:
             try:
                 frames.append(_read_table(f))
             except Exception as e:
                 st.error(f"Failed to read {f.name}: {e}")
         if frames:
-            merged = pd.concat(frames, ignore_index=True)
+            uploaded = pd.concat(frames, ignore_index=True)
             st.subheader("Preview (first 100 rows)")
-            st.dataframe(merged.head(100), use_container_width=True)
-            if st.button("Apply Upload"):
-                save_data(merged)
-                st.success("Upload applied ✅")
-        else:
-            st.warning("No valid files were loaded.")
+            st.dataframe(uploaded.head(100), use_container_width=True)
 
-# ---------- Settings ----------
+            # --- Apply mode ---
+            mode = st.radio(
+                "How should the uploaded data be applied?",
+                [
+                    "Replace (overwrite current inventory)",
+                    "Append (add rows)",
+                    "Merge/Upsert (match rows and update)",
+                ],
+                index=2,
+            )
+
+            current = load_data()
+
+            # Merge settings (only shown for Merge/Upsert)
+            key_cols = []
+            prefer_uploaded = True
+            if mode == "Merge/Upsert (match rows and update)":
+                st.markdown("**Match settings**")
+                avail = list(uploaded.columns)
+                default_keys = [c for c in ["name", "cas", "location"] if c in avail]
+                key_cols = st.multiselect(
+                    "Columns to match on (choose 1+)",
+                    options=avail,
+                    default=default_keys if default_keys else (avail[:1] if avail else []),
+                    help="Rows with the same values (case-insensitive) in these columns will be treated as the same chemical entry.",
+                )
+                strategy = st.selectbox(
+                    "When a match is found, which data wins?",
+                    [
+                        "Prefer uploaded (overwrite with uploaded non-empty values)",
+                        "Prefer existing (only fill blanks in current)",
+                    ],
+                )
+                prefer_uploaded = strategy.startswith("Prefer uploaded")
+
+            if st.button("Apply Upload", type="primary"):
+                if mode.startswith("Replace"):
+                    to_save = _ensure_schema(uploaded)
+                    if ROW_ID not in to_save.columns:
+                        to_save[ROW_ID] = [str(uuid.uuid4()) for _ in range(len(to_save))]
+                    save_data(to_save)
+                    st.success(f"Replaced inventory with {len(to_save)} rows.")
+
+                elif mode.startswith("Append"):
+                    up = _ensure_schema(uploaded)
+                    cur = _ensure_schema(current)
+                    if ROW_ID not in up.columns:
+                        up[ROW_ID] = [str(uuid.uuid4()) for _ in range(len(up))]
+                    combined = pd.concat([cur, up], ignore_index=True)
+                    save_data(combined)
+                    st.success(f"Appended {len(up)} rows (new total: {len(combined)}).")
+
+                else:  # Merge/Upsert
+                    if not key_cols:
+                        st.error("Pick at least one match column for merge.")
+                    else:
+                        up = _ensure_schema(uploaded).copy()
+                        cur = _ensure_schema(current).copy()
+                        cur["__merge_key"] = _make_keycols(cur, key_cols)
+                        up["__merge_key"] = _make_keycols(up, key_cols)
+
+                        updated = 0
+                        inserted = 0
+
+                        key_to_idx = {}
+                        for idx, k in cur["__merge_key"].items():
+                            key_to_idx.setdefault(k, []).append(idx)
+
+                        def _nonempty(val) -> bool:
+                            if pd.isna(val):
+                                return False
+                            if isinstance(val, str):
+                                return bool(val.strip())
+                            return True
+
+                        for _, urow in up.iterrows():
+                            k = urow["__merge_key"]
+                            if k in key_to_idx and len(key_to_idx[k]) > 0:
+                                idx = key_to_idx[k][0]
+                                changed = False
+                                for c in EXPECTED_COLS:
+                                    if c == ROW_ID:
+                                        continue
+                                    uval = urow.get(c, pd.NA)
+                                    cval = cur.at[idx, c] if c in cur.columns else pd.NA
+                                    if prefer_uploaded:
+                                        if _nonempty(uval) and (str(uval) != str(cval)):
+                                            cur.at[idx, c] = uval
+                                            changed = True
+                                    else:
+                                        if (not _nonempty(cval)) and _nonempty(uval):
+                                            cur.at[idx, c] = uval
+                                            changed = True
+                                if changed:
+                                    updated += 1
+                            else:
+                                new_row = {c: urow.get(c, pd.NA) for c in EXPECTED_COLS}
+                                new_row[ROW_ID] = str(uuid.uuid4())
+                                cur = pd.concat([cur, pd.DataFrame([new_row])], ignore_index=True)
+                                inserted += 1
+
+                        if "__merge_key" in cur.columns:
+                            cur = cur.drop(columns=["__merge_key"]) 
+                        save_data(cur)
+                        st.success(f"Merge complete: updated {updated}, inserted {inserted}. Total rows: {len(cur)}.")
+    else:
+        st.info("No files uploaded yet.")
+
 with t4:
     st.title("⚙️ Settings & Tips")
     if st.button("Reset to blank inventory"):
