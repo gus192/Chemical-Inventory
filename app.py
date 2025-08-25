@@ -58,7 +58,6 @@ def load_data() -> pd.DataFrame:
         except Exception:
             return pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID])
     return pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID])
-    return pd.DataFrame(columns=EXPECTED_COLS)
 
 def save_data(df: pd.DataFrame):
     df = df.copy()
@@ -254,7 +253,8 @@ with t3:
                 raise ValueError(f"Unsupported Excel extension: {ext}")
         except ImportError as e:
             st.error(
-                "Missing Excel engine. Add the following to requirements.txt and redeploy: "
+                "Missing Excel engine. Add the following to requirements.txt and redeploy:
+"
                 "`openpyxl` (for .xlsx), `xlrd` (for .xls), `odfpy` (for .ods).
 
 "
@@ -291,5 +291,5 @@ with t3:
 with t4:
     st.title("⚙️ Settings & Tips")
     if st.button("Reset to blank inventory"):
-        save_data(pd.DataFrame(columns=EXPECTED_COLS))
+        save_data(pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID]))
         st.success("Inventory reset.")
