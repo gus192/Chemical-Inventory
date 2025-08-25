@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 from io import BytesIO
-import requests, re
+import requests, re, uuid
 
 st.set_page_config(page_title="Neitzel Lab Inventory", layout="wide", page_icon="🧪")
 
@@ -26,6 +26,8 @@ EXPECTED_COLS = [
     "name", "cas", "carbons", "distributor", "container_size",
     "state", "location", "bottles", "storage_conditions", "hazards", "sds_link"
 ]
+# Unique row identifier used for precise deletes even when names are duplicated
+ROW_ID = "_row_id"
 
 def template_csv_bytes():
     buf = BytesIO()
@@ -37,27 +39,43 @@ def load_data() -> pd.DataFrame:
     if os.path.exists(DATA_FILE):
         try:
             df = pd.read_csv(DATA_FILE)
+            # Ensure required columns
             for c in EXPECTED_COLS:
                 if c not in df.columns:
                     df[c] = pd.NA
+            # Create/repair unique row ids
+            if ROW_ID not in df.columns:
+                df[ROW_ID] = [str(uuid.uuid4()) for _ in range(len(df))]
+            df[ROW_ID] = df[ROW_ID].astype(str)
+            # Clean types
             df["bottles"] = pd.to_numeric(df["bottles"], errors="coerce").fillna(1).astype(int)
             for c in ["name","cas","distributor","container_size","state","location","storage_conditions","hazards","sds_link"]:
                 df[c] = df[c].astype(str).replace({"nan":""}).fillna("")
             df["carbons"] = pd.to_numeric(df["carbons"], errors="coerce")
-            return df[EXPECTED_COLS]
+            # Return with ROW_ID so views can reference it
+            cols = EXPECTED_COLS + ([ROW_ID] if ROW_ID in df.columns else [])
+            return df[cols]
         except Exception:
-            return pd.DataFrame(columns=EXPECTED_COLS)
+            return pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID])
+    return pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID])
     return pd.DataFrame(columns=EXPECTED_COLS)
 
 def save_data(df: pd.DataFrame):
     df = df.copy()
+    # Ensure schema
     for c in EXPECTED_COLS:
         if c not in df.columns:
             df[c] = pd.NA
+    if ROW_ID not in df.columns:
+        df[ROW_ID] = [str(uuid.uuid4()) for _ in range(len(df))]
+    df[ROW_ID] = df[ROW_ID].astype(str)
+    # Normalize
     df["bottles"] = pd.to_numeric(df["bottles"], errors="coerce").fillna(1).astype(int)
     for c in ["name","cas","distributor","container_size","state","location","storage_conditions","hazards","sds_link"]:
         df[c] = df[c].astype(str).replace({"nan":""}).fillna("")
-    df[EXPECTED_COLS].to_csv(DATA_FILE, index=False)
+    # Persist with row ids so deletes are stable
+    cols = EXPECTED_COLS + [ROW_ID]
+    df[cols].to_csv(DATA_FILE, index=False)
 
 # Enhanced external chemical info fetcher
 def fetch_details(query: str):
@@ -138,12 +156,27 @@ with t1:
                 },
                 key=f"inv_table_{key_suffix}",
             )
-            if st.button(f"Delete all in {loc_label}", key=f"del_{key_suffix}"):
-                if loc_label == "All":
-                    save_data(pd.DataFrame(columns=EXPECTED_COLS))
-                else:
+            if loc_label != "All":
+                if st.button(f"Delete all in {loc_label}", key=f"del_{key_suffix}"):
                     save_data(df[df["location"] != loc_label])
-                st.success("Deleted successfully.")
+                    st.success("Deleted successfully.")
+
+            # Single-row delete selector (safe)
+            st.markdown("**Delete a single row (safe):**")
+            if ROW_ID in view.columns and len(view) > 0:
+                options = []
+                for _, r in view.iterrows():
+                    label = f"{r.get('name','')} | CAS:{r.get('cas','') or '-'} | Size:{r.get('container_size','') or '-'} | Loc:{r.get('location','') or '-'} | Bottles:{r.get('bottles','')} | ID:{str(r[ROW_ID])[:8]}"
+                    options.append((label, str(r[ROW_ID])))
+                labels = [lab for lab, _ in options]
+                selected_label = st.selectbox("Pick row to delete", labels, key=f"rowdel_select_{key_suffix}")
+                selected_id = dict(options).get(selected_label)
+                if st.button("🗑️ Delete selected row", key=f"rowdel_btn_{key_suffix}", disabled=(selected_id is None)):
+                    new_df = df[~df[ROW_ID].astype(str).eq(selected_id)]
+                    save_data(new_df)
+                    st.success("Row deleted. Refresh to see changes.")
+            else:
+                st.caption("No rows to delete in this view.")
 
         with tabs[0]:
             render_view(df, "All")
@@ -195,7 +228,8 @@ with t2:
                 "bottles": bottles,
                 "storage_conditions": storage_conditions,
                 "hazards": hazards,
-                "sds_link": sds_link
+                "sds_link": sds_link,
+                ROW_ID: str(uuid.uuid4()),
             }
             df = pd.concat([df, pd.DataFrame([new_entry])], ignore_index=True)
             save_data(df)
