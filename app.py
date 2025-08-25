@@ -122,6 +122,88 @@ def fetch_details(query: str):
     return details
 
 # =============================
+# Google Sheets backup helpers (optional)
+# =============================
+
+def _gsheets_enabled() -> bool:
+    """Return True if [gsheets] secrets are configured with enabled=true."""
+    try:
+        return bool(st.secrets.get("gsheets", {}).get("enabled"))
+    except Exception:
+        return False
+
+
+def _open_gsheets():
+    """Open the Google Sheet and return (worksheet, spreadsheet_url).
+    Requires Streamlit secrets with a [gsheets] section.
+    """
+    import gspread  # imported only when needed
+    from google.oauth2.service_account import Credentials
+
+    cfg = dict(st.secrets["gsheets"])  # copy
+    spreadsheet_url = cfg.pop("spreadsheet_url")
+    cfg.pop("enabled", None)
+    scope = [
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive",
+    ]
+    creds = Credentials.from_service_account_info(cfg, scopes=scope)
+    client = gspread.authorize(creds)
+    sh = client.open_by_url(spreadsheet_url)
+    ws = sh.sheet1
+    return ws, spreadsheet_url
+
+
+def _ensure_schema_for_backup(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    for c in EXPECTED_COLS:
+        if c not in df.columns:
+            df[c] = pd.NA
+    for c in [
+        "name","cas","distributor","container_size","state","location",
+        "storage_conditions","hazards","sds_link",
+    ]:
+        df[c] = df[c].astype(str).replace({"nan": ""}).fillna("")
+    df["bottles"] = pd.to_numeric(df["bottles"], errors="coerce").fillna(1).astype(int)
+    df["carbons"] = pd.to_numeric(df["carbons"], errors="coerce")
+    if ROW_ID not in df.columns:
+        df[ROW_ID] = [str(uuid.uuid4()) for _ in range(len(df))]
+    df[ROW_ID] = df[ROW_ID].astype(str)
+    return df[EXPECTED_COLS + [ROW_ID]]
+
+
+def _backup_to_gsheets(df: pd.DataFrame):
+    """Write the current inventory to Google Sheets (overwrites sheet1)."""
+    ws, _ = _open_gsheets()
+    df = _ensure_schema_for_backup(df)
+    data = [EXPECTED_COLS] + df[EXPECTED_COLS].astype(str).values.tolist()
+    ws.clear()
+    ws.update("A1", data)
+
+
+def _restore_from_gsheets() -> pd.DataFrame:
+    """Read inventory from Google Sheets sheet1 and return a normalized DataFrame."""
+    ws, _ = _open_gsheets()
+    values = ws.get_all_values()
+    if not values:
+        return pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID])
+    headers = values[0]
+    rows = values[1:]
+    df = pd.DataFrame(rows, columns=headers)
+    # normalize
+    for c in EXPECTED_COLS:
+        if c not in df.columns:
+            df[c] = pd.NA
+    if "bottles" in df.columns:
+        df["bottles"] = pd.to_numeric(df["bottles"], errors="coerce").fillna(1).astype(int)
+    if "carbons" in df.columns:
+        df["carbons"] = pd.to_numeric(df["carbons"], errors="coerce")
+    if ROW_ID not in df.columns:
+        df[ROW_ID] = [str(uuid.uuid4()) for _ in range(len(df))]
+    df[ROW_ID] = df[ROW_ID].astype(str)
+    return df[EXPECTED_COLS + [ROW_ID]]
+
+# =============================
 # UI Tabs
 # =============================
 
@@ -486,6 +568,42 @@ with t3:
 
 with t4:
     st.title("⚙️ Settings & Tips")
+
+    # Quick reset
     if st.button("Reset to blank inventory"):
-        save_data(pd.DataFrame(columns=EXPECTED_COLS))
+        save_data(pd.DataFrame(columns=EXPECTED_COLS + [ROW_ID]))
         st.success("Inventory reset.")
+
+    st.divider()
+    st.subheader("Google Sheets backup (optional)")
+    if _gsheets_enabled():
+        try:
+            _, sheet_url = _open_gsheets()
+            st.caption(f"Connected to: {sheet_url}")
+        except Exception as e:
+            st.error(f"Configured, but connection failed: {e}")
+        c1, c2, c3 = st.columns(3)
+        with c1:
+            if st.button("Backup now → Sheets"):
+                try:
+                    _backup_to_gsheets(load_data())
+                    st.success("Backed up current inventory to Google Sheets.")
+                except Exception as e:
+                    st.error(f"Backup failed: {e}")
+        with c2:
+            if st.button("Restore from Sheets"):
+                try:
+                    restored = _restore_from_gsheets()
+                    save_data(restored)
+                    st.success(f"Restored {len(restored)} rows from Google Sheets.")
+                except Exception as e:
+                    st.error(f"Restore failed: {e}")
+        with c3:
+            if st.button("Test connection"):
+                try:
+                    _ = _open_gsheets()
+                    st.info("Connection OK.")
+                except Exception as e:
+                    st.error(f"Connection failed: {e}")
+    else:
+        st.info("To enable, add `gspread` and `google-auth` to requirements, then set Streamlit Secrets with a [gsheets] block (enabled=true, spreadsheet_url, and service account JSON fields). Share the sheet with the service account email.")
