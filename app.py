@@ -255,7 +255,7 @@ with t3:
         except ImportError as e:
             st.error(
                 "Missing Excel engine. Add the following to requirements.txt and redeploy: "
-                `openpyxl` (for .xlsx), `xlrd` (for .xls), `odfpy` (for .ods).
+                "`openpyxl` (for .xlsx), `xlrd` (for .xls), `odfpy` (for .ods).
 
 "
                 f"Details: {e}"
