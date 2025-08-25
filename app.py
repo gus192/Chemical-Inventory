@@ -238,21 +238,54 @@ with t2:
 # ---------- Upload / Merge ----------
 with t3:
     st.title("📂 Upload or Merge Spreadsheet(s)")
-    st.caption("Drop in CSV or Excel files.")
-    upl = st.file_uploader("Upload CSV/XLSX", type=["csv","xlsx"], accept_multiple_files=True)
+    st.caption("Drop in CSV or Excel files. Supported: CSV, XLSX/XLSM/XLTX/XLTM, XLS, ODS.")
+
+    def _read_excel_smart(file):
+        name = file.name.lower()
+        ext = os.path.splitext(name)[1]
+        try:
+            if ext in (".xlsx", ".xlsm", ".xltx", ".xltm"):
+                return pd.read_excel(file, engine="openpyxl")
+            elif ext == ".xls":
+                return pd.read_excel(file, engine="xlrd")
+            elif ext == ".ods":
+                return pd.read_excel(file, engine="odf")
+            else:
+                raise ValueError(f"Unsupported Excel extension: {ext}")
+        except ImportError as e:
+            st.error(
+                "Missing Excel engine. Add the following to requirements.txt and redeploy: "
+                "`openpyxl` (for .xlsx), `xlrd` (for .xls), `odfpy` (for .ods).
+
+"
+                f"Details: {e}"
+            )
+            raise
+
+    upl = st.file_uploader(
+        "Upload CSV/XLSX/XLS/ODS",
+        type=["csv","xlsx","xls","xlsm","xltx","xltm","ods"],
+        accept_multiple_files=True,
+    )
+
     if upl:
         frames = []
         for f in upl:
-            if f.name.lower().endswith(".csv"):
-                raw = pd.read_csv(f)
-            else:
-                raw = pd.read_excel(f)
-            frames.append(raw)
-        merged = pd.concat(frames, ignore_index=True)
-        st.dataframe(merged.head(100), use_container_width=True)
-        if st.button("Apply Upload"):
-            save_data(merged)
-            st.success("Upload applied ✅")
+            try:
+                if f.name.lower().endswith(".csv"):
+                    raw = pd.read_csv(f)
+                else:
+                    raw = _read_excel_smart(f)
+                frames.append(raw)
+            except Exception as e:
+                st.error(f"Failed to read {f.name}: {e}")
+        if frames:
+            merged = pd.concat(frames, ignore_index=True)
+            st.subheader("Preview (first 100 rows)")
+            st.dataframe(merged.head(100), use_container_width=True)
+            if st.button("Apply Upload"):
+                save_data(merged)
+                st.success("Upload applied ✅")
 
 # ---------- Settings ----------
 with t4:
