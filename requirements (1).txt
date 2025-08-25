@@ -1,0 +1,12 @@
+streamlit>=1.35
+pandas>=2.0
+requests>=2.31
+
+# Excel engines
+openpyxl>=3.1    # for .xlsx/.xlsm/.xltx/.xltm
+xlrd>=2.0        # for legacy .xls
+odfpy>=1.4       # for .ods
+
+# Optional Google Sheets backend (uncomment if you switch to Sheets)
+# gspread>=6.0.0
+# google-auth>=2.23.0
