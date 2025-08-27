@@ -575,7 +575,7 @@ with t4:
         st.success("Inventory reset.")
 
     st.divider()
-    st.subheader("Google Sheets backup (optional)")
+    st.subheader("Google Sheets backup")
     if _gsheets_enabled():
         try:
             _, sheet_url = _open_gsheets()
